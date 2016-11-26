@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161126145140) do
+ActiveRecord::Schema.define(version: 20161126153229) do
 
   create_table "caracteristiques", force: :cascade do |t|
     t.string   "name"
@@ -110,6 +110,8 @@ ActiveRecord::Schema.define(version: 20161126145140) do
     t.string   "langage"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "role_id"
+    t.index ["role_id"], name: "index_users_on_role_id"
   end
 
 end
