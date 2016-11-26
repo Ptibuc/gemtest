@@ -839,3 +839,107 @@ Processing by PublicController#home as HTML
 Completed 200 OK in 51ms (Views: 47.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2016-11-26 19:56:28 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PublicController#home as HTML
+  Rendering public/home.html.erb within layouts/application
+  Rendered public/home.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 389ms (Views: 370.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2016-11-26 19:56:30 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 103ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-26 19:56:30 +0100
+Processing by PublicController#home as HTML
+  Rendering public/home.html.erb within layouts/application
+  Rendered public/home.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-11-26 19:56:32 +0100
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-26 19:56:32 +0100
+Processing by PublicController#home as HTML
+  Rendering public/home.html.erb within layouts/application
+  Rendered public/home.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 41ms (Views: 38.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2016-11-26 19:56:33 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-26 19:56:33 +0100
+Processing by PublicController#home as HTML
+  Rendering public/home.html.erb within layouts/application
+  Rendered public/home.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2016-11-26 19:56:45 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5gp0SIJCBZLGaSWoEkw+UXNvLJRtummeD7C5BwJCmFN2MWHzV2+beU+6WFbVMQ1XWvnGHPh+lzh6Q6H5nDB8zA=="}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 18ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-26 19:56:45 +0100
+Processing by PublicController#home as HTML
+  Rendering public/home.html.erb within layouts/application
+  Rendered public/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 76ms (Views: 71.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2016-11-26 19:56:47 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (41.7ms)
+Completed 200 OK in 122ms (Views: 113.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-11-26 19:56:49 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 84ms (Views: 79.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-11-26 19:56:52 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tm8HifVvwAWe+FQaKf5zykzYB4wFvRKsY1TNGjGBPYv1hTYvApqujeguEaj9kWlacp1juGf7YoARRCJUKixFxQ==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.8ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-11-26 18:56:52 UTC], ["last_sign_in_at", 2016-11-26 16:44:46 UTC], ["sign_in_count", 3], ["updated_at", 2016-11-26 18:56:52 UTC], ["id", 1]]
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 277ms (ActiveRecord: 9.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-26 19:56:53 +0100
+Processing by PublicController#home as HTML
+  Rendering public/home.html.erb within layouts/application
+  Rendered public/home.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
