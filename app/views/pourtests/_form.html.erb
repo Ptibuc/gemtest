@@ -1,0 +1,27 @@
+<%= form_for(pourtest) do |f| %>
+  <% if pourtest.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pourtest.errors.count, "error") %> prohibited this pourtest from being saved:</h2>
+
+      <ul>
+      <% pourtest.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :surname %>
+    <%= f.text_field :surname %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

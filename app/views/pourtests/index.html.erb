@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pourtests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Surname</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pourtests.each do |pourtest| %>
+      <tr>
+        <td><%= pourtest.name %></td>
+        <td><%= pourtest.surname %></td>
+        <td><%= link_to 'Show', pourtest %></td>
+        <td><%= link_to 'Edit', edit_pourtest_path(pourtest) %></td>
+        <td><%= link_to 'Destroy', pourtest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pourtest', new_pourtest_path %>

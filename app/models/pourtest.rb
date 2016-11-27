@@ -1,0 +1,2 @@
+class Pourtest < ApplicationRecord
+end
