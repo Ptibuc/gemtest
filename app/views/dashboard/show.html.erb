@@ -1,2 +1,16 @@
 <h1>Dashboard</h1>
 <p>On est sur le tableau de bord.</p>
+<p>User</p>
+<ul>
+  <li>ID : <%= current_user.id %></li>
+  <li>Email : <%= current_user.email %></li>
+  <li>Photo : <%= current_user.photo %></li>
+  <li>Langue : <%= current_user.langage %></li>
+  <li>Compte créé le : <%= current_user.created_at %></li>
+  <li>Admin : <%= current_user.is_admin? %></li>
+  <li>Nombre de logs : <%= current_user.sign_in_count %></li>
+  <li>Session créé depuis : <%= current_user.current_sign_in_at %></li>
+  <li>Dernière connexion : <%= current_user.last_sign_in_at %></li>
+  <li>IP de connexion actuelle : <%= current_user.current_sign_in_ip %></li>
+  <li>IP utilisée la dernière fois : <%= current_user.last_sign_in_ip %></li>
+</ul>

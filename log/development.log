@@ -1601,3 +1601,659 @@ Processing by DashboardController#show as HTML
 Completed 200 OK in 45ms (Views: 41.3ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/dashboard" for 127.0.0.1 at 2016-11-26 21:52:01 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered dashboard/show.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 416ms (Views: 365.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2016-11-26 21:52:46 +0100
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered dashboard/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 94ms (Views: 40.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2016-11-26 21:53:56 +0100
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered dashboard/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (1.5ms)
+Completed 200 OK in 61ms (Views: 57.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2016-11-26 21:58:07 +0100
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered dashboard/show.html.erb within layouts/application (13.6ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `role' for #<User:0x007fae8908fe50>):
+     7:   <li>Photo : <%= current_user.photo %></li>
+     8:   <li>Langue : <%= current_user.langage %></li>
+     9:   <li>Compte créé le : <%= current_user.created_at %></li>
+    10:   <li>Type de compte : <%= current_user.role.libelle %></li>
+    11:   <li>Nombre de logs : <%= current_user.sign_in_count %></li>
+    12:   <li>Session créé depuis : <%= current_user.current_sign_in_at %></li>
+    13:   <li>Dernière connexion : <%= current_user.last_sign_in_at %></li>
+  
+app/views/dashboard/show.html.erb:10:in `_app_views_dashboard_show_html_erb__1437681986773221919_70193799986820'
+  Rendering /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.5ms)
+  Rendering /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.1ms)
+  Rendering /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (45.4ms)
+Started GET "/dashboard" for 127.0.0.1 at 2016-11-26 21:58:36 +0100
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered dashboard/show.html.erb within layouts/application (8.5ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `role' for #<User:0x007fae8008b070>):
+     7:   <li>Photo : <%= current_user.photo %></li>
+     8:   <li>Langue : <%= current_user.langage %></li>
+     9:   <li>Compte créé le : <%= current_user.created_at %></li>
+    10:   <li>Type de compte : <%= current_user.role %></li>
+    11:   <li>Nombre de logs : <%= current_user.sign_in_count %></li>
+    12:   <li>Session créé depuis : <%= current_user.current_sign_in_at %></li>
+    13:   <li>Dernière connexion : <%= current_user.last_sign_in_at %></li>
+  
+app/views/dashboard/show.html.erb:10:in `_app_views_dashboard_show_html_erb__1437681986773221919_70193724541760'
+  Rendering /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.6ms)
+  Rendering /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.5ms)
+  Rendering /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (44.5ms)
+Started GET "/dashboard" for 127.0.0.1 at 2016-11-26 21:58:43 +0100
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered dashboard/show.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 65ms (Views: 60.5ms | ActiveRecord: 0.9ms)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.8ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "role_id" = ? WHERE "users"."id" = ?[0m  [["updated_at", 2016-11-26 21:00:44 UTC], ["role_id", 2], ["id", 1]]
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/dashboard" for 127.0.0.1 at 2016-11-26 22:00:56 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered dashboard/show.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 417ms (Views: 367.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2016-11-26 22:01:07 +0100
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered dashboard/show.html.erb within layouts/application (7.8ms)
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `role' for #<User:0x005613988deee0>):
+     7:   <li>Photo : <%= current_user.photo %></li>
+     8:   <li>Langue : <%= current_user.langage %></li>
+     9:   <li>Compte créé le : <%= current_user.created_at %></li>
+    10:   <li>Type de compte : <%= current_user.role.libelle %></li>
+    11:   <li>Nombre de logs : <%= current_user.sign_in_count %></li>
+    12:   <li>Session créé depuis : <%= current_user.current_sign_in_at %></li>
+    13:   <li>Dernière connexion : <%= current_user.last_sign_in_at %></li>
+  
+app/views/dashboard/show.html.erb:10:in `_app_views_dashboard_show_html_erb___1188484040884761586_70077961526880'
+  Rendering /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (17.2ms)
+  Rendering /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.2ms)
+  Rendering /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (54.3ms)
+Started GET "/dashboard" for 127.0.0.1 at 2016-11-26 22:01:39 +0100
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered dashboard/show.html.erb within layouts/application (106.4ms)
+Completed 500 Internal Server Error in 115ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `role' for #<#<Class:0x0056139a37f038>:0x007f78980534b8>):
+     7:   <li>Photo : <%= current_user.photo %></li>
+     8:   <li>Langue : <%= current_user.langage %></li>
+     9:   <li>Compte créé le : <%= current_user.created_at %></li>
+    10:   <li>Type de compte : <%= role.find(current_user.role_id).libelle %></li>
+    11:   <li>Nombre de logs : <%= current_user.sign_in_count %></li>
+    12:   <li>Session créé depuis : <%= current_user.current_sign_in_at %></li>
+    13:   <li>Dernière connexion : <%= current_user.last_sign_in_at %></li>
+  
+app/views/dashboard/show.html.erb:10:in `_app_views_dashboard_show_html_erb___1188484040884761586_70077961641780'
+  Rendering /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.8ms)
+  Rendering /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendering /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (42.3ms)
+Started GET "/dashboard" for 127.0.0.1 at 2016-11-26 22:01:48 +0100
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/show.html.erb within layouts/application
+  [1m[36mRole Load (0.4ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered dashboard/show.html.erb within layouts/application (18.9ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 64ms (Views: 57.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2016-11-26 22:02:08 +0100
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered dashboard/show.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `Role' for #<User:0x0056139867a618>):
+     7:   <li>Photo : <%= current_user.photo %></li>
+     8:   <li>Langue : <%= current_user.langage %></li>
+     9:   <li>Compte créé le : <%= current_user.created_at %></li>
+    10:   <li>Type de compte : <%= current_user.Role.libelle %></li>
+    11:   <li>Nombre de logs : <%= current_user.sign_in_count %></li>
+    12:   <li>Session créé depuis : <%= current_user.current_sign_in_at %></li>
+    13:   <li>Dernière connexion : <%= current_user.last_sign_in_at %></li>
+  
+app/views/dashboard/show.html.erb:10:in `_app_views_dashboard_show_html_erb___1188484040884761586_47321080519900'
+  Rendering /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (13.5ms)
+  Rendering /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendering /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/nicolas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (47.2ms)
+Started GET "/dashboard" for 127.0.0.1 at 2016-11-26 22:02:20 +0100
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/show.html.erb within layouts/application
+  [1m[36mRole Load (0.3ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered dashboard/show.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 47ms (Views: 42.8ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2016-11-26 22:03:03 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9czIQSDZKfmAftC2SenQME/dv7xj8WIQ3cc1pmSr2ByD6uZtRwJLMsEkLh5/AV5+CixHp0bYgzItFCErFj7U4g=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 24ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-26 22:03:03 +0100
+Processing by PublicController#home as HTML
+  Rendering public/home.html.erb within layouts/application
+  Rendered public/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 42ms (Views: 33.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-26 22:03:05 +0100
+Processing by PublicController#home as HTML
+  Rendering public/home.html.erb within layouts/application
+  Rendered public/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 43ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-11-26 22:03:08 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (53.8ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (1.3ms)
+Completed 200 OK in 95ms (Views: 91.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-11-26 22:03:11 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bQBicCDqVVybfzTOWkxhdZ/TkphSvN048soW0Y6xxHBWeCHRlCjq6pZXoCca6ZAFXnmYzPaal+dF3qVyyUxdRA==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-11-26 21:03:11 UTC], ["last_sign_in_at", 2016-11-26 20:49:12 UTC], ["sign_in_count", 8], ["updated_at", 2016-11-26 21:03:11 UTC], ["id", 1]]
+  [1m[35m (13.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 278ms (ActiveRecord: 16.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-26 22:03:11 +0100
+Processing by PublicController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2016-11-26 22:03:11 +0100
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/show.html.erb within layouts/application
+  [1m[36mRole Load (0.3ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered dashboard/show.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 62ms (Views: 48.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-26 22:03:15 +0100
+Processing by PublicController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2016-11-26 22:03:15 +0100
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/show.html.erb within layouts/application
+  [1m[36mRole Load (0.2ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered dashboard/show.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 45ms (Views: 41.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-26 22:03:16 +0100
+Processing by PublicController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2016-11-26 22:03:16 +0100
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/show.html.erb within layouts/application
+  [1m[36mRole Load (0.3ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered dashboard/show.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 50ms (Views: 45.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-27 08:26:33 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PublicController#home as HTML
+  Rendering public/home.html.erb within layouts/application
+  Rendered public/home.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 402ms (Views: 376.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-11-27 08:26:38 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (5.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (58.8ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (1.3ms)
+Completed 200 OK in 190ms (Views: 162.0ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-11-27 08:26:42 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Md4QWqlVyLh97lICkDzM5CYCjomfOo0eb4lboOmxO/GKAwixNchwNyIggYetgNhHxKdzdEZNHMeqLn8hnyB7iA==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-11-27 07:26:42 UTC], ["last_sign_in_at", 2016-11-26 21:03:11 UTC], ["sign_in_count", 9], ["updated_at", 2016-11-27 07:26:42 UTC], ["id", 1]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 285ms (ActiveRecord: 10.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-27 08:26:42 +0100
+Processing by PublicController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2016-11-27 08:26:42 +0100
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/show.html.erb within layouts/application
+  [1m[36mRole Load (0.3ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered dashboard/show.html.erb within layouts/application (21.9ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 71ms (Views: 66.7ms | ActiveRecord: 1.5ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeleteRoleAndRoleToUserThenAddIsAdminToUser (20161127072738)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (5.1ms)[0m  [1m[35mDROP TABLE "roles"[0m
+  [1m[35m (1.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeleteRoleAndRoleToUserThenAddIsAdminToUser (20161127072738)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.0ms)[0m  [1m[35mDROP TABLE "roles"[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ausers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "photo" varchar, "langage" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "role_id" integer, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar)[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_role_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_role_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_reset_password_token" ON "ausers" ("reset_password_token")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_email" ON "ausers" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "tindex_ausers_on_role_id" ON "ausers" ("role_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "ausers" ("id","photo","langage","created_at","updated_at","role_id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","sign_in_count","current_sign_in_at","last_sign_in_at","current_sign_in_ip","last_sign_in_ip")
+                     SELECT "id","photo","langage","created_at","updated_at","role_id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","sign_in_count","current_sign_in_at","last_sign_in_at","current_sign_in_ip","last_sign_in_ip" FROM "users"[0m
+  [1m[35m (3.2ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "photo" varchar, "langage" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar)[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_ausers_on_role_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_ausers_on_role_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_ausers_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_ausers_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_ausers_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_ausers_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "users" ("id","photo","langage","created_at","updated_at","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","sign_in_count","current_sign_in_at","last_sign_in_at","current_sign_in_ip","last_sign_in_ip")
+                     SELECT "id","photo","langage","created_at","updated_at","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","sign_in_count","current_sign_in_at","last_sign_in_at","current_sign_in_ip","last_sign_in_ip" FROM "ausers"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE "ausers"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "is_admin" boolean DEFAULT 'f'[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161127072738"]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_caracteristiques_on_site_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_caracteristiques_on_site_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_categories_on_site_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_categories_on_site_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_has_caracteristique_on_caracteristique_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_has_caracteristique_on_caracteristique_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_has_caracteristique_on_product_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_has_caracteristique_on_product_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_has_caracteristiques_on_caracteristique_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_has_caracteristiques_on_caracteristique_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_has_caracteristiques_on_product_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_has_caracteristiques_on_product_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_has_categorie_on_categorie_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_has_categorie_on_categorie_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_has_categorie_on_site_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_has_categorie_on_site_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_has_categories_on_categorie_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_has_categories_on_categorie_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_has_categories_on_product_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_has_categories_on_product_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_phrases_on_caracteristique_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_phrases_on_caracteristique_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_products_on_site_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_products_on_site_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_sites_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_sites_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "is_admin" = ? WHERE "users"."id" = ?[0m  [["updated_at", 2016-11-27 07:37:41 UTC], ["is_admin", true], ["id", 1]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/dashboard" for 127.0.0.1 at 2016-11-27 08:38:31 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered dashboard/show.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 519ms (Views: 447.3ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2016-11-27 08:39:15 +0100
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered dashboard/show.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_header.html.erb (90.2ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 110ms (Views: 104.2ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2016-11-27 08:39:48 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EOrm8BPaVt3k1rredEdIF+7uVYQiYBWbUh8KiJlmFu0tt4ynQRdQtFPMo0bacFdVuVzbaR1hSq+BZCd8cK+GOw=="}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 49ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-27 08:39:49 +0100
+Processing by PublicController#home as HTML
+  Rendering public/home.html.erb within layouts/application
+  Rendered public/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (69.1ms)
+  Rendered layouts/_footer.html.erb (1.6ms)
+Completed 200 OK in 91ms (Views: 82.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2016-11-27 08:39:50 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (36.7ms)
+  Rendered layouts/_header.html.erb (57.3ms)
+  Rendered layouts/_footer.html.erb (2.1ms)
+Completed 200 OK in 120ms (Views: 116.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-11-27 08:40:00 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gv9jP30dIRRAwTUu1/qnLkYJ+RPS2Sl7qy1ytT5/q5bUaz8fqvmKSJNPqqghJZ2wh8EgYRH/9DYIXkDbdi3UfA==", "user"=>{"email"=>"2@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "2@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (3.3ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?)[0m  [["created_at", 2016-11-27 07:40:01 UTC], ["updated_at", 2016-11-27 07:40:01 UTC], ["email", "2@gmail.com"], ["encrypted_password", "$2a$11$LZOJz.9RYMiuD25w8YPKx.wp0TO.yNqW7sKIzhoxi8TU0Q4B6zkNi"]]
+  [1m[35m (8.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.5ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ? WHERE "users"."id" = ?[0m  [["updated_at", 2016-11-27 07:40:01 UTC], ["sign_in_count", 1], ["current_sign_in_at", 2016-11-27 07:40:01 UTC], ["last_sign_in_at", 2016-11-27 07:40:01 UTC], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["id", 2]]
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 314ms (ActiveRecord: 23.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-27 08:40:01 +0100
+Processing by PublicController#home as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 4ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2016-11-27 08:40:01 +0100
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered dashboard/show.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header.html.erb (35.9ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 49ms (Views: 45.2ms | ActiveRecord: 0.3ms)
+
+
